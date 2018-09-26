@@ -31,6 +31,11 @@
             </div>
             <div class="back_side"></div>
             <div class="black"></div>
+            <div class="box_anim" >
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </header>
 
         <div class="slider">
@@ -40,15 +45,15 @@
             <div class="container">
 
                 <div class="box_item" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="800" data-aos-duration="500">
-                    <img src="icons/eraser.svg" alt="ico">
-                    <p>clean design</p>
-                    <h6>Extreme Attention to<br> Detail</h6>
+                    <img src="icons/browser.svg" alt="ico">
+                    <p>HTML & CSS</p>
+                    <h6>HTML 5<br> CSS 3</h6>
                 </div>
 
 
                 <div class="box_item" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="840" data-aos-duration="500">
-                    <img src="icons/maintenance.svg" alt="ico">
-                    <p>development</p>
+                    <img src="icons/js.svg" alt="ico">
+                    <p>JavaScript</p>
                     <h6>converting data to graphical interface for user</h6>
                 </div>
 
@@ -168,6 +173,12 @@
         $(document).ready(function() {
             $(window).scroll(function() {
                 $('.block').css("opacity", 0.8 - $(window).scrollTop() / 500)
+            })
+        })
+        
+         $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.box_anim').css("opacity", 1 - $(window).scrollTop() / 1300)
             })
         })
     </script>
