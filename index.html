@@ -16,29 +16,34 @@
 <body>
     <div class="wraper">
 
-        <nav id="nav">
-
+        <nav id="nav" class="nav">
+            <ul>
+                <li><a href="#hm">home</a></li>
+                <li><a href="#sci">skills</a></li>
+                <li><a href="#wor">works</a></li>
+                <li><a href="#con">contact</a></li>
+            </ul>
         </nav>
 
-        <header class="head">
+        <header class="head" id="hm">
             <div class="block">
                 <img src="images/pic01.jpg" alt="pic">
                 <div class="about">
-                    <h1>Hi,<br> My name is Volodymyr Hetnarovych</h1>
+                    <h1>Hi,<br> My name is Volodymyr </h1>
                     <hr>
                     <h2>... and i am a junior Frontend Developer</h2>
                 </div>
             </div>
             <div class="back_side"></div>
             <div class="black"></div>
-            <div class="box_anim" >
+            <div class="box_anim">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </header>
 
-        <div class="slider">
+        <div class="slider" id="sci">
             <div class="arrow_left">
                 <img src="icons/back.svg" alt="back">
             </div>
@@ -81,8 +86,8 @@
             </div>
         </div>
 
-        <div class="works">
-            <div class="text" >
+        <div class="works" id="wor">
+            <div class="text">
                 <h1 data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1200" data-aos-duration="2500">LOOK ON MY WORKS</h1>
                 <p data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1300" data-aos-duration="2500">Iam are passionate about design, user interface, and usability.<br> And iam mean passionate.
                     Our projects are focused on purpose for the end user, profitability for our clients and performance for the web. </p>
@@ -113,28 +118,30 @@
             </div>
 
         </div>
-        
-        <section class="contact">
-           <div class="inf">
-            <div class="form_block" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="2200" data-aos-duration="2500">
-             <form>
-                <input type="text" name="name" placeholder="YOUR NAME">
-                <input type="email" name="email" placeholder="YOUR EMAIL" required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
-                <textarea name="message" placeholder="YOUR MASSAGE"></textarea>
-                <input type="submit" value="SEND MESSAGE" name="send">
-            </form>
+
+        <section class="contact" id="con">
+            <div class="inf">
+                <div class="form_block" data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="2200" data-aos-duration="2500">
+                    <form>
+                        <input type="text" name="name" placeholder="YOUR NAME">
+                        <input type="email" name="email" placeholder="YOUR EMAIL" required pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+                        <textarea name="message" placeholder="YOUR MASSAGE"></textarea>
+                        <input type="submit" value="SEND MESSAGE" name="send">
+                    </form>
+                </div>
+                <div class="text">
+                    <h1 data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2200" data-aos-duration="2500">CONTACT ME</h1>
+                    <p data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2300" data-aos-duration="2500">If you need You can use that form to contact me or use social links down on page. </p>
+                    <hr data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2300" data-aos-duration="2500">
+                </div>
             </div>
-             <div class="text" >
-                <h1 data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2200" data-aos-duration="2500">CONTACT ME</h1>
-                <p data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2300" data-aos-duration="2500">If you need You can use that form to contact me or use social links down on page. </p>
-                <hr data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2300" data-aos-duration="2500">
-            </div>
-            </div>
-            <div class="social" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2400" data-aos-duration="2500">
-                <a href=""><img src="icons/vk.svg" alt="sc"></a>
-                <a href=""><img src="icons/twitter.svg" alt="sc"></a>
-                <a href=""><img src="icons/facebook-letter-logo.svg" alt="sc"></a>
-                <a href=""><img src="icons/github.svg" alt="sc"></a>
+            <div class="soc_back">
+                <div class="social" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="2400" data-aos-duration="2500">
+                    <a href=""><img src="icons/vk.svg" alt="sc"></a>
+                    <a href=""><img src="icons/twitter.svg" alt="sc"></a>
+                    <a href=""><img src="icons/facebook-letter-logo.svg" alt="sc"></a>
+                    <a href=""><img src="icons/github.svg" alt="sc"></a>
+                </div>
             </div>
         </section>
 
@@ -175,8 +182,8 @@
                 $('.block').css("opacity", 0.8 - $(window).scrollTop() / 500)
             })
         })
-        
-         $(document).ready(function() {
+
+        $(document).ready(function() {
             $(window).scroll(function() {
                 $('.box_anim').css("opacity", 1 - $(window).scrollTop() / 1300)
             })
@@ -185,6 +192,28 @@
 
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        $(function() {
+
+            var url = window.location.href;
+
+            $('[href="' + url + '"]').parents(".nav").prev().addClass("active")
+
+        })
+    </script>
+
+    <script>
+        $('.wraper .nav ul li a').click(function() {
+            var element = $(this).attr('href');
+            var dist = $(element).offset().top;
+            $('html, body').animate({
+                'scrollTop': dist
+            }, 1000);
+
+            return false;
+        });
     </script>
 
 </body>
