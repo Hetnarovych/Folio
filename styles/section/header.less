@@ -1,0 +1,603 @@
+.wraper {
+    width: 100%;
+    overflow: hidden;
+
+    nav {
+        width: 100%;
+        height: 0px;
+        background-color: black;
+        z-index: 999999999;
+
+    }
+
+    .head {
+        background-image: url(../images/R3gimt.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 700px;
+        position: relative;
+    }
+
+    .back_side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(60, 107, 136, 0.44);
+        height: 500px;
+        border-width: 200px 0 0 1400px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgba(46, 71, 100, 0.37);
+
+
+    }
+
+    .black {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(60, 60, 136, 0);
+        border-width: 200px 0 0 1400px;
+        border-style: solid;
+        border-color: transparent transparent transparent rgba(46, 88, 100, 0.37);
+    }
+
+    .block {
+        width: 72%;
+        height: 60%;
+        background-image: linear-gradient(to top, #284557, #6c7e96);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -56%);
+        box-shadow: -10px 10px 60px #050505;
+        z-index: 999;
+        opacity: 0.8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        overflow: hidden;
+        animation-name: header_block;
+        animation-duration: 0.6s;
+
+
+        img[alt='pic'] {
+            height: 100%;
+            animation-name: head_pic;
+            animation-duration: 2.2s;
+        }
+
+        @keyframes head_pic {
+            0% {
+                opacity: 0;
+                transform: translate(-100px);
+            }
+        }
+
+        .about {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin-right: 5%;
+
+            h1 {
+                font-size: 40px;
+                color: white;
+                font-family: Agency FB;
+                margin-bottom: 20px;
+                animation-name: cool;
+                animation-duration: 6s;
+
+            }
+
+            @keyframes cool {
+                0% {
+                    opacity: 0;
+
+                }
+            }
+
+            hr {
+                width: 80px;
+                height: 1px;
+                border: none;
+                background-color: white;
+                margin-right: 0px;
+                animation-name: coolest;
+                animation-duration: 2s;
+
+            }
+
+            @keyframes coolest {
+                0% {
+                    transform: translate(900px);
+                    opacity: 0;
+                }
+
+                70% {
+                    opacity: 0;
+                }
+            }
+
+            h2 {
+                font-size: 26px;
+                color: white;
+                font-family: Agency FB;
+                margin-top: 20px;
+                animation-name: coo;
+                animation-duration: 3s;
+
+            }
+
+            @keyframes coo {
+                0% {
+                    opacity: 0;
+                }
+            }
+
+        }
+    }
+
+    @keyframes header_block {
+        0% {
+            opacity: 0;
+        }
+    }
+
+    .slider {
+        width: 100%;
+        height: 300px;
+        background-image: linear-gradient(rgba(1, 88, 113, 0.19), rgba(46, 88, 100, 0.37));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            background-color: rgba(60, 60, 136, 0);
+            border-width: 160px 0 0 160px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(46, 88, 100, 0.62);
+        }
+
+        .arrow_left {
+            cursor: pointer;
+            width: 60px;
+            height: 160px;
+            border: 2px solid rgba(108, 126, 150, 0);
+            margin-left: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: 0.5s;
+
+            img[alt='back'] {
+                width: 40%;
+            }
+
+            &:hover {
+                transform: scale(2) rotateX(360deg);
+                transition: 0.5s;
+            }
+        }
+
+        .arrow_right {
+            cursor: pointer;
+            width: 60px;
+            height: 160px;
+            border: 2px solid rgba(36, 40, 41, 0);
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: 0.5s;
+
+            img[alt='back_tw'] {
+                width: 40%;
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                transform: scale(2) rotateX(360deg);
+                transition: 0.5s;
+            }
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+
+            .box_item {
+                width: 120px;
+                height: 200px;
+                box-shadow: -2px 2px 60px rgba(5, 5, 5, 0.26);
+                margin: 0 20px;
+                background-color: rgba(46, 71, 100, 0.37);
+                cursor: pointer;
+                z-index: 99999;
+                transition: 0.5s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: Agency FB;
+                font-size: 22px;
+                color: rgb(232, 232, 232);
+                text-transform: uppercase;
+
+                h6 {
+                    font-size: 12px;
+                    text-align: center;
+                    display: none;
+
+                }
+
+                img[alt="ico"] {
+                    margin-bottom: 40px;
+                    width: 40%;
+                }
+            }
+
+            .change {
+                background-color: rgba(46, 71, 100, 0.77);
+                transform: scale(1.4);
+
+                h6 {
+                    margin-top: 18px;
+                    display: block;
+                    transition: 0.4s;
+                }
+            }
+
+        }
+    }
+
+    .works {
+        height: 800px;
+        background-image: url(../images/back2.jpg);
+        position: relative;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(46, 88, 100, 0.59);
+            border-width: 800px 0 0 2400px;
+            border-style: solid;
+            border-color: rgba(46, 88, 100, 0.37) transparent transparent transparent;
+
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(130, 227, 255, 0);
+            border-width: 2300px 0 0 2400px;
+            border-style: solid;
+            border-color: rgba(55, 92, 103, 0.83) transparent transparent transparent;
+
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 98%;
+            margin-bottom: 100px;
+            margin-top: 100px;
+            margin-left: -60px;
+
+
+            .box_info {
+                box-shadow: -10px 10px 60px #050505;
+
+                width: 40%;
+                height: 160px;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                z-index: 999999;
+                filter: grayscale(30%);
+                transition: .4s;
+                box-sizing: border-box;
+                filter: grayscale(70%);
+                cursor: pointer;
+                text-align: center;
+                margin: 10px 10px;
+
+                &:nth-child(n+1) {
+                    background-image: url(../images/Layer21.png);
+                    background-size: cover;
+                    background-position: center;
+
+                }
+
+                &:nth-child(n+2) {
+                    background-image: url(../images/back2.jpg);
+                    background-size: cover;
+                    background-position: center;
+
+                }
+
+                &:nth-child(n+3) {
+                    background-image: url(../images/one.png);
+                    background-size: cover;
+                    background-position: center;
+
+                }
+
+                &:nth-child(n+4) {
+                    background-image: url(../images/pic01.jpg);
+                    background-size: cover;
+                    background-position: center;
+
+                }
+
+                h4 {
+                    display: none;
+                    color: white;
+                    font-family: Agency FB;
+                    font-size: 30px;
+
+                }
+
+                p {
+                    display: none;
+                    font-size: 20px;
+                    font-family: Agency FB;
+                    text-transform: uppercase;
+                    margin-bottom: 40px;
+                    margin-top: 20px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+
+
+                &:hover {
+
+                    transition: .4s;
+                    filter: grayscale(0);
+                    width: 66%;
+                    z-index: 99999999;
+
+                    h4 {
+                        display: block;
+                    }
+
+                    p {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+        .text {
+            width: 98%;
+            font-family: Agency FB;
+            margin-top: 0px;
+            color: #e8e8e8;
+            z-index: 999999;
+            margin-left: 80px;
+
+            h1 {
+                font-size: 60px;
+                margin-bottom: 40px;
+
+                span {
+                    transform: rotatex(360deg);
+                    transition: 10s;
+                }
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 30px;
+                width: 90%;
+            }
+
+            hr {
+                width: 90%;
+                border: none;
+                background-color: white;
+                height: 1px;
+                margin-top: 40px;
+                margin-left: 0px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+    .contact {
+        width: 100%;
+        height: 700px;
+        background-image: linear-gradient(rgba(1, 88, 113, 0.19), rgba(46, 88, 100, 0.37));
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            background-color: rgba(60, 60, 136, 0);
+            border-width: 160px 0 0 160px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(46, 88, 100, 0.62);
+        }
+
+        .inf {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            .form_block {
+                width: 52%;
+                height: 400px;
+                background-image: linear-gradient(to top, #284557, #6c7e96);
+                box-shadow: -10px 10px 60px #050505;
+                z-index: 999;
+                opacity: 0.8;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                text-align: center;
+
+
+                input[name="name"] {
+                    width: 48%;
+                    height: 50px;
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    border-bottom-width: 20%;
+                    background-color: rgba(46, 71, 100, 0);
+
+                    &::-webkit-input-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                     &::-moz-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                }
+
+                input[name="email"] {
+                    width: 48%;
+                    height: 50px;
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: rgba(46, 71, 100, 0);
+
+                    &::-webkit-input-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                     &::-moz-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                }
+
+                textarea {
+                    width: 96%;
+                    height: 200px;
+                    resize: none;
+                    margin: 20px auto;
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    border-left: 1px solid rgb(255, 255, 255);
+                    background-color: rgba(46, 71, 100, 0);
+
+                    &::-webkit-input-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                     &::-moz-placeholder {
+                        color: white;
+                        font-family: Agency FB;
+                    }
+                }
+
+                input[name="send"] {
+                    width: 97%;
+                    height: 50px;
+                    border: 1px solid rgb(255, 255, 255);
+                    background-color: rgba(46, 71, 100, 0);
+                    color: white;
+                    font-family: Agency FB;
+                }
+            }
+
+            .text {
+                width: 30%;
+                font-family: Agency FB;
+                margin-top: 0px;
+                color: #f8f8f8;
+                z-index: 999999;
+                margin-left: 80px;
+
+                h1 {
+                    font-size: 60px;
+                    margin-bottom: 40px;
+
+                    span {
+                        transform: rotatex(360deg);
+                        transition: 10s;
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                    width: 90%;
+                }
+
+                hr {
+                    width: 90%;
+                    border: none;
+                    background-color: white;
+                    height: 1px;
+                    margin-top: 40px;
+                    margin-left: 0px;
+                    margin-bottom: 100px;
+                    opacity: 0.8;
+                }
+            }
+        }
+        .social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            margin-top: 100px;
+            a{
+                 &:hover{
+                    transform: rotatey(360deg) scale(2);
+                    transition: 1s;
+                }
+            img[alt="sc"]{
+                width: 20px;
+                margin: 0 20px;
+               
+            }
+            }
+        }
+
+
+    }
+}

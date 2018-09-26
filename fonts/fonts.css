@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Varela-Regular';
+  src: url('fonts/varela/Varela-Regular.eot');
+  src: url('fonts/varela/Varela-Regular.woff') format('woff2'),
+       url('fonts/varela/Varela-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Varela';
+  src: url('varela/Varela.woff') format('woff'),
+       url('varela/Varela.ttf') format('truetype'),
+       url('varela/Varela.svg#Varela') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('openSansRegular/OpenSans-Regular.eot');
+  src: url('openSansRegular/OpenSans-Regular.woff2') format('woff2'),
+       url('openSansRegular/OpenSans-Regular.woff') format('woff'),
+       url('/fonts/openSansRegular/OpenSans-Regular.ttf') format('truetype'),
+       url('/fonts/openSansRegular/OpenSans-Regular.svg#OpenSans-Regular') format('svg'),
+       url('/fonts/openSansRegular/OpenSans-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('openSansSemibold/OpenSans-SemiBold.eot');
+  src: url('openSansSemibold/OpenSans-SemiBold.woff2') format('woff2'),
+       url('openSansSemibold/OpenSans-SemiBold.woff') format('woff'),
+       url('openSansSemibold/OpenSans-SemiBold.ttf') format('truetype'),
+       url('openSansSemibold/OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg'),
+       url('openSansSemibold/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url('fonts/openSansExtrabold/OpenSans-ExtraBold.eot');
+  src: url('fonts/openSansExtrabold/OpenSans-ExtraBold.woff2') format('woff2'),
+       url('fonts/openSansExtrabold/OpenSans-ExtraBold.woff') format('woff'),
+       url('fonts/openSansExtrabold/OpenSans-ExtraBold.ttf') format('truetype'),
+       url('fonts/openSansExtrabold/OpenSans-ExtraBold.svg#OpenSans-ExtraBold') format('svg'),
+       url('fonts/openSansExtrabold/OpenSans-ExtraBold.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
