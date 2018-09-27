@@ -150,6 +150,9 @@
     </div>
 
 
+
+
+
     <script>
         window.onscroll = function() {
             myFunction()
@@ -167,9 +170,36 @@
         }
     </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="js/jqwery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+   <script>
+        $(window).on("scroll", function() {
+            var scro = $(window).scrollTop();
+            var scr = 0;
+            var scr2 = 449;
+            var scr3 = 811;
+            var scr4 = 1678;
+            var scr5 = 2073;
+            if ($(window).scrollTop() >= scr && scro <= scr2) {
+                $('a[href="#hm"]').addClass('active');
+            } else $('a[href="#hm"]').removeClass('active');
+            if (scro > scr2 && scro <= scr3) {
+                $('a[href="#sci"]').addClass('active');
+            } else $('a[href="#sci"]').removeClass('active');
+            if (scro > scr3 && scro <= scr4) {
+                $('a[href="#wor"]').addClass('active');
+            } else $('a[href="#wor"]').removeClass('active');
+            if (scro > scr4 && scro <= scr5) {
+                $('a[href="#con"]').addClass('active');
+            } else $('a[href="#con"]').removeClass('active');
+            if (scro > scr5) {
+                $('#m5').addClass('active');
+            } else $('#m5').removeClass('active');
+
+        });
+    </script>
 
     <script>
         $(document).on('click', 'div', function() {
@@ -194,15 +224,6 @@
         AOS.init();
     </script>
 
-    <script>
-        $(function() {
-
-            var url = window.location.href;
-
-            $('[href="' + url + '"]').parents(".nav").prev().addClass("active")
-
-        })
-    </script>
 
     <script>
         $('.wraper .nav ul li a').click(function() {
@@ -215,6 +236,11 @@
             return false;
         });
     </script>
+
+ 
+
+
+
 
 </body>
 
