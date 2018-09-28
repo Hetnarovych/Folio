@@ -61,17 +61,21 @@
         animation-name: header_block;
         animation-duration: 0.6s;
 
-
-        img[alt='pic'] {
+        .img_block {
+            width: 40%;
             height: 100%;
+            background-image: url(../images/pic01.jpg);
+            background-size: cover;
+            background-position: center;
             animation-name: head_pic;
             animation-duration: 2.2s;
-        }
 
-        @keyframes head_pic {
-            0% {
-                opacity: 0;
-                transform: translate(-100px);
+
+            @keyframes head_pic {
+                0% {
+                    opacity: 0;
+                    transform: translate(-100px);
+                }
             }
         }
 
@@ -476,6 +480,7 @@
                 margin-bottom: 100px;
             }
         }
+
     }
 
     .contact {
@@ -509,7 +514,7 @@
             flex-direction: row;
 
             .form_block {
-                width: 52%;
+                width: 54%;
                 height: 400px;
                 background-image: linear-gradient(to top, #284557, #6c7e96);
                 box-shadow: -10px 10px 60px #050505;
@@ -632,7 +637,11 @@
                     margin-bottom: 100px;
                     opacity: 0.8;
                 }
+
+
             }
+
+
         }
 
         .soc_back {
@@ -643,14 +652,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             .social {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: row;
-                
+
                 width: 100%;
-                
+
 
                 a {
                     &:hover {
@@ -670,16 +680,22 @@
 
     }
 
-   .nav {
+    .nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgb(44, 100, 113);
+        background-color: rgba(44, 86, 113, 0.62);
         opacity: 0.6;
+
+        &:hover {
+            opacity: 1;
+        }
+
 
         ul li {
             display: inline;
             margin: 10px;
+
 
             a {
                 font-size: 18px;
@@ -692,8 +708,10 @@
                 border-radius: 4px;
                 transition: 0.2s;
                 box-shadow: -10px 10px 60px #050505;
-//                 background-color: rgba(44, 78, 113, 0.5);
+                //                 background-color: rgba(44, 78, 113, 0.5);
+
             }
+
         }
     }
 }

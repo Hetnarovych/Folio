@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet/less" href="styles/main_all.less">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="iconified/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="iconified/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="iconified/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="iconified/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="iconified/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="iconified/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="iconified/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="iconified/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="iconified/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="iconified/apple-touch-icon-180x180.png" />
     <script src="js/less.min.js"></script>
 </head>
 
@@ -27,7 +37,9 @@
 
         <header class="head" id="hm">
             <div class="block">
-                <img src="images/pic01.jpg" alt="pic">
+                <div class="img_block">
+
+                </div>
                 <div class="about">
                     <h1>Hi,<br> My name is Volodymyr </h1>
                     <hr>
@@ -96,7 +108,9 @@
                 <p data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1600" data-aos-duration="2500">Iam are passionate about design, user interface, and usability.<br> And iam mean passionate.
                     Our projects are focused on purpose for the end user, profitability for our clients and performance for the web. </p>
                 <hr data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1700" data-aos-duration="2500">
+
             </div>
+
             <div class="boxes">
                 <div class="box_info" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="1300" data-aos-duration="2500">
                     <h4>Mike Taylor</h4>
@@ -145,103 +159,11 @@
             </div>
         </section>
 
-
-
     </div>
-
-
-
-
-
-    <script>
-        window.onscroll = function() {
-            myFunction()
-        };
-
-        var nav = document.getElementById("nav");
-        var sticky = nav.offsetTop;
-
-        function myFunction() {
-            if (window.pageYOffset > 400) {
-                nav.classList.add("fix");
-            } else {
-                nav.classList.remove("fix");
-            }
-        }
-    </script>
-
 
     <script src="js/jqwery.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-   <script>
-        $(window).on("scroll", function() {
-            var scro = $(window).scrollTop();
-            var scr = 0;
-            var scr2 = 449;
-            var scr3 = 811;
-            var scr4 = 1678;
-            var scr5 = 2073;
-            if ($(window).scrollTop() >= scr && scro <= scr2) {
-                $('a[href="#hm"]').addClass('active');
-            } else $('a[href="#hm"]').removeClass('active');
-            if (scro > scr2 && scro <= scr3) {
-                $('a[href="#sci"]').addClass('active');
-            } else $('a[href="#sci"]').removeClass('active');
-            if (scro > scr3 && scro <= scr4) {
-                $('a[href="#wor"]').addClass('active');
-            } else $('a[href="#wor"]').removeClass('active');
-            if (scro > scr4 && scro <= scr5) {
-                $('a[href="#con"]').addClass('active');
-            } else $('a[href="#con"]').removeClass('active');
-            if (scro > scr5) {
-                $('#m5').addClass('active');
-            } else $('#m5').removeClass('active');
-
-        });
-    </script>
-
-    <script>
-        $(document).on('click', 'div', function() {
-            $(this).addClass('change').siblings().removeClass('change')
-        })
-    </script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                $('.block').css("opacity", 0.8 - $(window).scrollTop() / 500)
-            })
-        })
-
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                $('.box_anim').css("opacity", 1 - $(window).scrollTop() / 1300)
-            })
-        })
-    </script>
-
-    <script>
-        AOS.init();
-    </script>
-
-
-    <script>
-        $('.wraper .nav ul li a').click(function() {
-            var element = $(this).attr('href');
-            var dist = $(element).offset().top;
-            $('html, body').animate({
-                'scrollTop': dist
-            }, 1000);
-
-            return false;
-        });
-    </script>
-
- 
-
-
-
-
+    <script src="js/costumize.scroll.js"></script>
 </body>
 
 </html>

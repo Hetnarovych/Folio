@@ -1,0 +1,18 @@
+@font-face {
+  font-family: '8711';
+  src: url('8711.eot');
+  src: url('8711.woff2') format('woff2'),
+       url('8711.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AgencyFBCyrillic';
+  src: url('AgencyFBCyrillic.woff') format('woff'),
+       url('AgencyFBCyrillic.ttf') format('truetype'),
+       url('AgencyFBCyrillic.svg#AgencyFBCyrillic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
