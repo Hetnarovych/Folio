@@ -287,6 +287,11 @@
                 color: rgb(232, 232, 232);
                 text-transform: uppercase;
 
+                &:hover {
+                    background-image: linear-gradient(to top, rgba(46, 85, 100, 0.57), rgba(46, 71, 100, 0.57));
+                    box-shadow: 0px 20px 30px 4px rgba(5, 5, 5, 0.26);
+                }
+
 
 
 
@@ -305,9 +310,10 @@
             }
 
             .change {
-                background-color: rgba(46, 71, 100, 0.57);
-                box-shadow: 0px 20px 30px 4px rgba(5, 5, 5, 0.26);
-                transform: perspective(1000px) rotateX(-10deg) rotatey(20deg) translateZ(20px) translatex(-4px) translateY(-6px) scale(1.1);
+                background-image: linear-gradient(to top, rgba(46, 85, 100, 0.57), rgba(46, 71, 100, 0.57));
+                box-shadow: -6px 20px 30px 4px rgba(5, 5, 5, 0.26);
+                transform: perspective(1000px) rotateX(-10deg) rotatey(20deg) translateZ(20px) translatex(0px) translateY(4px) scale(1.1);
+                
 
                 .top_right_fon {
                     content: '';
@@ -317,9 +323,26 @@
                     width: 90%;
                     height: 90%;
                     background-image: linear-gradient(rgba(46, 71, 100, 0.08), rgba(255, 255, 255, 0));
-                    transform: perspective(1000px) rotateX(-6deg) rotatey(20deg) translateZ(-60px) translatex(4px) translateY(0px) scale(1.1);
+                    transform: perspective(1000px) rotateX(-6deg) rotatey(20deg) translateZ(-60px) translatex(4px) translateY(-2px) scale(1.1);
                     border-left: 1px solid rgba(6, 67, 100, 0.04);
                     border-top: 1px solid rgba(6, 67, 100, 0.06);
+                    transition-delay: 1.6s;
+                    transition: 0.2s;
+                    
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 90%;
+                        height: 90%;
+                        background-image: linear-gradient(rgba(46, 71, 100, 0.04), rgba(255, 255, 255, 0));
+                        transform: perspective(1000px) rotateX(-6deg) rotatey(20deg) translateZ(-60px) translatex(12px) translateY(4px) scale(1.1);
+                        border-left: 1px solid rgba(6, 67, 100, 0.02);
+                        border-top: 1px solid rgba(6, 67, 100, 0.01);
+
+                    }
 
                 }
 
@@ -346,26 +369,25 @@
 
                 }
 
+                h6 {
+                    margin-top: 8px;
+                    display: block;
+                    box-shadow: -2px 2px 10px rgba(5, 5, 5, 0.02);
 
-
-
-                //                h6 {
-                //                    margin-top: 18px;
-                //                    display: block;
-                //                    box-shadow: -6px 12px 10px rgba(5, 5, 5, 0.26);
-                //                    clip: circle();
-                //                }
+                }
 
                 img[alt="ico"] {
                     box-shadow: -2px 2px 10px rgba(5, 5, 5, 0.02);
                     transform: scale(1.6);
                     background-color: rgba(240, 248, 255, 0);
 
+
                 }
 
                 p {
                     box-shadow: -2px 2px 10px rgba(5, 5, 5, 0.02);
                     transform: scale(1.1);
+
                 }
             }
 
@@ -560,8 +582,6 @@
         background-image: linear-gradient(rgba(1, 88, 113, 0.19), rgba(46, 88, 100, 0.37));
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -957,7 +977,7 @@
                 .box_info {
                     width: 30%;
                     margin: auto auto;
-                    transition: 0s;
+                    transition: 1s;
 
                     &:hover {
 
@@ -995,6 +1015,37 @@
                 hr {
                     margin-bottom: 39px;
                     width: 88%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px){
+    .wraper{
+        .contact{
+            .inf{
+            display: flex;
+            flex-direction: column;
+                width: 96%;
+                .form_block{
+                    order: 2;
+                    width: 90%;
+                    height: 400px;
+                    textarea{
+                        height: 100px;
+                        
+                    }
+                    
+                }
+                .text{
+                    width: 90%;
+                    margin: 0 auto;
+                    h1{
+                        margin-top: 40px;
+                    }
+                    hr{
+                        margin-bottom: 40px;
+                    }
                 }
             }
         }
