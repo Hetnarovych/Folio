@@ -61,6 +61,16 @@ function myFunction() {
     if (window.pageYOffset > 400) {
         nav.classList.add("fix");
     } else {
-        nav.classList.remove("fix");
-    }
+        nav.classList.remove("fix")
+    };
 };
+
+$(document).ready(function(){
+    $('.box_item').tilt({
+        maxTilt: 40,
+        glare: true,
+        maxGlare: .3,
+        animation: 1000,
+    });
+});
+                 
