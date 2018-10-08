@@ -23,9 +23,11 @@ $(window).on("scroll", function () {
 
 });
 
-$(document).on('click', 'div', function () {
+$(document).on('click', 'div[id="bi"]', function () {
     $(this).addClass('change').siblings().removeClass('change')
 });
+
+
 $(document).ready(function () {
     $(window).scroll(function () {
         $('.block').css("opacity", 0.8 - $(window).scrollTop() / 500)
@@ -42,7 +44,7 @@ $('.wraper .nav ul li a').click(function () {
     var element = $(this).attr('href');
     var dist = $(element).offset().top;
     $('html, body').animate({
-        'scrollTop': dist
+        'scrollTop': dist - 50
     }, 1000);
 
     return false;
@@ -65,12 +67,11 @@ function myFunction() {
     };
 };
 
-$(document).ready(function(){
-    $('.box_item').tilt({
-        maxTilt: 40,
-        glare: true,
-        maxGlare: .3,
-        animation: 1000,
-    });
-});
-                 
+//$(document).ready(function () {
+//    $('.box_item').tilt({
+//        maxTilt: 40,
+//        glare: true,
+//        maxGlare: .3,
+//        animation: 1000,
+//    });
+//});
